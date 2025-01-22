@@ -3,5 +3,6 @@ function newColor(){
 }
 
 setInterval(()=>{
+  console.log("change")
   document.body.style.backgroundColor = newColor()
 },1000)
