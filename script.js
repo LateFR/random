@@ -21,5 +21,5 @@ setInterval(()=>{
       ${newColor()},
       ${newColor()} 70.71%
       )
-      ${newColor()};
+      ${newColor()};'
 },1000)
