@@ -17,10 +17,9 @@ setInterval(()=>{
       ${newColor()} 70.71%
     ),
     radial-gradient(
-        circle at 93.3% 75%,
-        ${newColor()},
-        ${newColor()} 70.71%
+      circle at 93.3% 75%,
+      ${newColor()},
+      ${newColor()} 70.71%
       )
       ${newColor()};
-  border-radius: 50%;`
 },1000)
