@@ -15,7 +15,17 @@ let time=500
 if (params.has("f")){
   time=Number(params.get("f"))
 }
+
+let pause=false
+document.addEventListener("keydown",(event)=>{
+  if (event.key=="Space"){
+    pause=!pause
+}
+  
 setInterval(()=>{
+  if (pause){
+    return
+  }
   document.body.style.background = `repeating-linear-gradient(
           ${random_deg()}deg,
           ${newColor()} ${random_px()}px,
