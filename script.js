@@ -4,7 +4,7 @@ function newColor(){
 }
 
 setInterval(()=>{
-  document.body.style.background = `repeating-linear-gradient(
+  document.querySelector("div").style.background = `repeating-linear-gradient(
           190deg,
           ${newColor()} 40px,
           ${newColor()} 80px,
