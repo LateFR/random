@@ -10,7 +10,7 @@ function random_deg(){
   return Math.floor(Math.random()*720-360)
 }
 
-const params = new URLSearchParam(window.location.search)
+const params = new URLSearchParams(window.location.search)
 if (param.has("f")){
   let time=Number(param.get("f"))
 }else{
