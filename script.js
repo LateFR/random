@@ -3,5 +3,5 @@ function newColor(){
 }
 
 setInterval(()=>{
-  document.body.style.backgroundColor = newColor
+  document.body.style.backgroundColor = newColor()
 },1000)
