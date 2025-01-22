@@ -7,6 +7,7 @@ function random_px(){
 }
 
 function random_deg(){
+  return Math.floor(Math.random()*360-180)
 }
 setInterval(()=>{
   document.querySelector("div").style.background = `repeating-linear-gradient(
