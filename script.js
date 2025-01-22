@@ -11,8 +11,8 @@ function random_deg(){
 }
 
 const params = new URLSearchParams(window.location.search)
-if (param.has("f")){
-  let time=Number(param.get("f"))
+if (params.has("f")){
+  let time=Number(params.get("f"))
 }else{
   let time= 1000
 }
