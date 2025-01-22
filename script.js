@@ -10,9 +10,8 @@ function random_deg(){
   return Math.floor(Math.random()*720-360)
 }
 setInterval(()=>{
-  console.log("New color")
   document.querySelector("div").style.background = `repeating-linear-gradient(
-          190deg,
+          ${random_deg()}deg,
           ${newColor()} ${random_px()}px,
           ${newColor()} ${random_px()}px,
           ${newColor()} ${random_px()}px,
@@ -23,7 +22,7 @@ setInterval(()=>{
           ${newColor()} ${random_px()}px
         ),
         repeating-linear-gradient(
-          -190deg,
+          ${random_deg()}deg,
           ${newColor()} ${random_px()}px,
           ${newColor()} ${random_px()}px,
           ${newColor()} ${random_px()}px,
@@ -34,7 +33,7 @@ setInterval(()=>{
           ${newColor()} ${random_px()}px
         ),
         repeating-linear-gradient(
-          23deg,
+          ${random_deg()}deg,
           ${newColor()} ${random_px()}px,
           ${newColor()} ${random_px()}px,
           ${newColor()} ${random_px()}px,
@@ -44,4 +43,4 @@ setInterval(()=>{
           ${newColor()} ${random_px()}px,
           ${newColor()} ${random_px()}px
         )`;
-},1000)
+},500)
