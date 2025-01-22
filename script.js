@@ -10,7 +10,7 @@ function random_deg(){
   return Math.floor(Math.random()*720-360)
 }
 setInterval(()=>{
-  document.querySelector("div").style.background = `repeating-linear-gradient(
+  document.body.style.background = `repeating-linear-gradient(
           ${random_deg()}deg,
           ${newColor()} ${random_px()}px,
           ${newColor()} ${random_px()}px,
