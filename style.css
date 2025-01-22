@@ -1,3 +1,5 @@
 div{
-  transition: background 1s
+  transition: background 1s;
+  width:100wh;
+  height:100hv
 }
