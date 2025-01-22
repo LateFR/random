@@ -11,10 +11,9 @@ function random_deg(){
 }
 
 const params = new URLSearchParams(window.location.search)
+let time=500
 if (params.has("f")){
-  let time=Number(params.get("f"))
-}else{
-  let time= 1000
+  time=Number(params.get("f"))
 }
 setInterval(()=>{
   document.body.style.background = `repeating-linear-gradient(
