@@ -4,7 +4,7 @@ function newColor(){
 }
 
 setInterval(()=>{
-  document.body.style.background = '
+  document.body.style.background = `
     radial-gradient(
       circle at 50% 0,
       ${newColor()},
@@ -20,5 +20,5 @@ setInterval(()=>{
       ${newColor()},
       ${newColor()} 70.71%
       )
-      ${newColor()};'
+      ${newColor()};`
 },1000)
