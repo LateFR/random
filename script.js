@@ -10,6 +10,7 @@ function random_deg(){
   return Math.floor(Math.random()*720-360)
 }
 setInterval(()=>{
+  console.log("New color")
   document.querySelector("div").style.background = `repeating-linear-gradient(
           190deg,
           ${newColor()} ${random_px()}px,
