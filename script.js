@@ -18,7 +18,7 @@ if (params.has("f")){
 
 let pause=false
 document.addEventListener("keydown",(event)=>{
-  if (event.key=="Space"){
+  if (event.code=="Space"){
     pause=!pause
 }
   
