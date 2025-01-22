@@ -4,6 +4,23 @@ function newColor(){
 }
 
 setInterval(()=>{
-  console.log("change")
-  document.body.style.backgroundColor = newColor()
+  
+  document.body.style.background = `
+    radial-gradient(
+      circle at 50% 0,
+      ${newColor()},
+      ${newColor()} 70.71%
+    ),
+    radial-gradient(
+      circle at 6.7% 75%,
+      ${newColor()},
+      ${newColor()} 70.71%
+    ),
+    radial-gradient(
+        circle at 93.3% 75%,
+        ${newColor()},
+        ${newColor()} 70.71%
+      )
+      ${newColor()};
+  border-radius: 50%;`
 },1000)
