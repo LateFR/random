@@ -1,4 +1,4 @@
 .body{
-  border_radius: 50%
+  border-radius: 50%
   transition: background 1s
 }
