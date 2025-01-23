@@ -25,9 +25,8 @@ document.addEventListener("keydown",(event)=>{
 )
 
 setInterval(()=>{
-  if (pause){
-    return
-  }
+  while(pause){
+    setTimeout(()=>{},10)
   document.body.style.background = `repeating-linear-gradient(
           ${random_deg()}deg,
           ${newColor()} ${random_px()}px,
