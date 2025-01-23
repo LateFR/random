@@ -9,7 +9,30 @@ function random_px(){
 function random_deg(){
   return Math.floor(Math.random()*720-360)
 }
+function linear_gradient(){
+  return `repeating-linear-gradient(
+          ${random_deg()}deg,
+          ${newColor()} ${random_px()}px,
+          ${newColor()} ${random_px()}px,
+          ${newColor()} ${random_px()}px,
+          ${newColor()} ${random_px()}px,
+          ${newColor()} ${random_px()}px,
+          ${newColor()} ${random_px()}px,
+          ${newColor()} ${random_px()}px,
+          ${newColor()} ${random_px()}px
+        )`
+}
 
+function start_interval(){
+  interval= setInterval(()=>{
+      while(pause){
+        setTimeout(()=>{},70)
+      }
+      document.body.style.background = `{linear_gradient()},
+                                        {linear_gradient()}`;
+    },time)
+}
+function stop_interval(){}
 const params = new URLSearchParams(window.location.search)
 let time=500
 if (params.has("f")){
@@ -24,41 +47,3 @@ document.addEventListener("keydown",(event)=>{
   }
 })
 
-setInterval(()=>{
-  while(pause){
-    setTimeout(()=>{},70)
-  }
-  document.body.style.background = `repeating-linear-gradient(
-          ${random_deg()}deg,
-          ${newColor()} ${random_px()}px,
-          ${newColor()} ${random_px()}px,
-          ${newColor()} ${random_px()}px,
-          ${newColor()} ${random_px()}px,
-          ${newColor()} ${random_px()}px,
-          ${newColor()} ${random_px()}px,
-          ${newColor()} ${random_px()}px,
-          ${newColor()} ${random_px()}px
-        ),
-        repeating-linear-gradient(
-          ${random_deg()}deg,
-          ${newColor()} ${random_px()}px,
-          ${newColor()} ${random_px()}px,
-          ${newColor()} ${random_px()}px,
-          ${newColor()} ${random_px()}px,
-          ${newColor()} ${random_px()}px,
-          ${newColor()} ${random_px()}px,
-          ${newColor()} ${random_px()}px,
-          ${newColor()} ${random_px()}px
-        ),
-        repeating-linear-gradient(
-          ${random_deg()}deg,
-          ${newColor()} ${random_px()}px,
-          ${newColor()} ${random_px()}px,
-          ${newColor()} ${random_px()}px,
-          ${newColor()} ${random_px()}px,
-          ${newColor()} ${random_px()}px,
-          ${newColor()} ${random_px()}px,
-          ${newColor()} ${random_px()}px,
-          ${newColor()} ${random_px()}px
-        )`;
-},time)
