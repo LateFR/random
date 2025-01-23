@@ -21,8 +21,8 @@ document.addEventListener("keydown",(event)=>{
   console.log(event.code)
   if (event.code=="Space"){
     pause=!pause
-}
-)
+  }
+})
 
 setInterval(()=>{
   while(pause){
