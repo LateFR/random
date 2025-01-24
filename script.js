@@ -22,13 +22,30 @@ function linear_gradient(){
           ${newColor()} ${random_px()}px
         )`
 }
+// Mélange différents types de gradients pour encore plus de variété
+function random_gradient() {
+  const types = ["linear", "radial"]; // Types de gradients disponibles
+  const randomType = types[Math.floor(Math.random() * types.length)];
 
-function start_interval(){
-  interval= setInterval(()=>{
-    document.body.style.background = `${linear_gradient()},
-                                        ${linear_gradient()},
-                                        ${linear_gradient()}`;
-    },time)
+  if (randomType === "linear") {
+    return linear_gradient();
+  } else {
+    // Pour `radial-gradient`, ajoute un gradient radial avec des stops aléatoires
+    const stops = Array(8)
+      .fill(null)
+      .map(() => `${newColor()} ${random_px()}px`)
+      .join(", ");
+    return `radial-gradient(circle, ${stops})`;
+  }
+}
+
+// Gestion de l'intervalle pour modifier le fond
+function start_interval() {
+  interval = setInterval(() => {
+    document.body.style.background = `${random_gradient()},
+                                       ${random_gradient()},
+                                       ${random_gradient()}`;
+  }, time);
 }
 function stop_interval(){
   clearInterval(interval)
