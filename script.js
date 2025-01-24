@@ -25,16 +25,16 @@ function linear_gradient(){
 
 function start_interval(){
   interval= setInterval(()=>{
-      while(pause){
-        setTimeout(()=>{},70)
-      }
-      document.body.style.background = `{linear_gradient()},
+    document.body.style.background = `{linear_gradient()},
                                         {linear_gradient()}`;
     },time)
 }
-function stop_interval(){}
+function stop_interval(){
+  clearInterval(interval)
+}
 const params = new URLSearchParams(window.location.search)
 let time=500
+let interval
 if (params.has("f")){
   time=Number(params.get("f"))
 }
@@ -44,6 +44,11 @@ document.addEventListener("keydown",(event)=>{
   console.log(event.code)
   if (event.code=="Space"){
     pause=!pause
+    if (pause){
+      stop_interval()
+    }else{
+      startInterval()
   }
 })
 
+start_interval()
