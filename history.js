@@ -30,11 +30,5 @@ setInterval(()=>{
         history.pop()
         target=0
     }
-    
-    if (target<0){
-        target=0
-    }else if (target>10){
-        target=10
-    }
 },time)
 
