@@ -48,6 +48,7 @@ document.addEventListener("keydown",(event)=>{
       stop_interval()
     }else{
       startInterval()
+    }
   }
 })
 
