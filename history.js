@@ -24,5 +24,5 @@ setInterval(()=>{
         history.pop()
         target-=1
     }
-})
+},time)
 
