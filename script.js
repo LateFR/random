@@ -27,7 +27,6 @@ function start_interval(){
   interval= setInterval(()=>{
     document.body.style.background = `${linear_gradient()},
                                         ${linear_gradient()},
-                                        ${linear_gradient()},
                                         ${linear_gradient()}`;
     },time)
 }
