@@ -24,7 +24,7 @@ function linear_gradient(){
 }
 // Mélange différents types de gradients pour encore plus de variété
 function random_gradient() {
-  const types = ["linear", "radial"]; // Types de gradients disponibles
+  const types = ["linear", "radial","conic"]; // Types de gradients disponibles
   const randomType = types[Math.floor(Math.random() * types.length)];
 
   if (randomType === "linear") {
