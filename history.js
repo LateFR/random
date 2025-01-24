@@ -15,7 +15,7 @@ document.addEventListener("keydown",(event)=>{
     }
 })
 setInterval(()=>{
-    let background=window.getComputedStyle(body).background
+    let background=window.getComputedStyle(document.body).background
     if (history[0]!=background){
         history.unshift(background)
         target+=1
