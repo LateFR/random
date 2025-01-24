@@ -71,4 +71,7 @@ document.addEventListener("keydown",(event)=>{
   }
 })
 
+document.body.style.background = `${linear_gradient()},
+                                      ${linear_gradient()},
+                                      ${linear_gradient()}`;
 start_interval()
