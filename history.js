@@ -16,6 +16,7 @@ document.addEventListener("keydown",(event)=>{
         if (target<0){
             target=0
         document.body.style.background=history[target]
+        }
     }
 })
 setInterval(()=>{
