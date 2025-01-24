@@ -50,7 +50,7 @@ function stop_interval(){
   clearInterval(interval)
 }
 const params = new URLSearchParams(window.location.search)
-let time=500
+let time=0
 let interval
 if (params.has("f")){
   time=Number(params.get("f"))
