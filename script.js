@@ -41,6 +41,7 @@ function random_gradient() {
 
 // Gestion de l'intervalle pour modifier le fond
 function start_interval() {
+  console.log(time)
   interval = setInterval(() => {
     document.body.style.background = `${linear_gradient()},
                                       ${linear_gradient()},
