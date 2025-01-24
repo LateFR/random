@@ -10,6 +10,7 @@ document.addEventListener("keydown",(event)=>{
         if (target<10){
             target=10
         document.body.style.background=history[target]
+        }
     }
     else if (event.code=="ArrowRight"){
         target-=1
