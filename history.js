@@ -18,11 +18,11 @@ setInterval(()=>{
     let background=window.getComputedStyle(document.body).background
     if (history[0]!=background){
         history.unshift(background)
-        target+=1
+        target=0
     }
     if (history.length>10){
         history.pop()
-        target-=1
+        target=0
     }
 },time)
 
