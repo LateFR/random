@@ -43,7 +43,7 @@ function random_gradient() {
 function start_interval() {
   console.log(time)
   interval = setInterval(() => {
-    document.body.style.background-color = `${newColor()}`;
+    document.body.style.backgroundColor = `${newColor()}`;
   }, time);
 }
 function stop_interval(){
