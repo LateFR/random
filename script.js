@@ -43,9 +43,7 @@ function random_gradient() {
 function start_interval() {
   console.log(time)
   interval = setInterval(() => {
-    document.body.style.background = `${linear_gradient()},
-                                      ${linear_gradient()},
-                                      ${linear_gradient()}`;
+    document.body.style.background-color = `${newColor()}`;
   }, time);
 }
 function stop_interval(){
