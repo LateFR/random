@@ -28,7 +28,7 @@ function start_interval(){
     document.body.style.background = `${linear_gradient()},
                                         ${linear_gradient()},
                                         ${linear_gradient()},
-                                        ${linear_gradient()},`;
+                                        ${linear_gradient()}`;
     },time)
 }
 function stop_interval(){
