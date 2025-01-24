@@ -7,7 +7,7 @@ document.addEventListener("keydown",(event)=>{
     }
     if (event.code=="ArrowLeft"){
         target+=1
-        if (target<10){
+        if (target>10){
             target=10
         document.body.style.background=history[target]
         }
