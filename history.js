@@ -6,11 +6,11 @@ document.addEventListener("keydown",(event)=>{
         return
     }
     if (event.code=="ArrowLeft"){
-        target-=1
+        target+=1
         document.body.style.background=history[target]
     }
     else if (event.code=="ArrowRight"){
-        target+=1
+        target-=1
         document.body.style.background=history[target]
     }
 })
@@ -24,6 +24,10 @@ setInterval(()=>{
     }
     if (history.length>10){
         history.pop()
+        target=0
+    }
+    
+    if (target<0){
         target=0
     }
 },time)
