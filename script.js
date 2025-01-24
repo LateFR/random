@@ -42,7 +42,8 @@ function random_gradient() {
 // Gestion de l'intervalle pour modifier le fond
 function start_interval() {
   interval = setInterval(() => {
-    document.body.style.background = `${random_gradient()}`;
+    document.body.style.background = `${random_gradient()},
+                                      ${random_gradient()}`;
   }, time);
 }
 function stop_interval(){
