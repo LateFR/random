@@ -17,13 +17,12 @@ document.addEventListener("keydown",(event)=>{
 setInterval(()=>{
     let background=window.getComputedStyle(document.body).background
     
-    if (history[0]!=background){
+    if (history[0]!=background && !pause){
         history.unshift(background)
         target=0
         console.log("New backround")
     }
     if (history.length>10){
-        console.log("history: ${history.length}")
         history.pop()
         target=0
     }
