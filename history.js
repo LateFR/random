@@ -28,8 +28,9 @@ setInterval(()=>{
     }
     
     if (target<0){
-        console.log(target)
         target=0
+    }else if (target>10){
+        target=10
     }
 },time)
 
