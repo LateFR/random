@@ -10,7 +10,7 @@ function random_deg(){
   return Math.floor(Math.random()*720-360)
 }
 function linear_gradient(){
-  return `
+  return `repeating-linear-gradient(
           ${random_deg()}deg,
           ${newColor()} ${random_px()}px,
           ${newColor()} ${random_px()}px,
@@ -19,7 +19,8 @@ function linear_gradient(){
           ${newColor()} ${random_px()}px,
           ${newColor()} ${random_px()}px,
           ${newColor()} ${random_px()}px,
-          ${newColor()} ${random_px()}px`
+          ${newColor()} ${random_px()}px
+        )`
 }
 // Mélange différents types de gradients pour encore plus de variété
 function random_gradient() {
@@ -41,11 +42,9 @@ function random_gradient() {
 // Gestion de l'intervalle pour modifier le fond
 function start_interval() {
   interval = setInterval(() => {
-    document.body.style.background = `repeating-linear-gradient(
+    document.body.style.background = `${linear_gradient()},
                                       ${linear_gradient()},
-                                      ${linear_gradient()},
-                                      ${linear_gradient()}
-                                      )`;
+                                      ${linear_gradient()}`;
   }, time);
 }
 function stop_interval(){
